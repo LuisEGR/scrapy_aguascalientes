@@ -17,10 +17,10 @@ cd scrapy_aguascalientes
 
 ## TODO
 - [x] Spider ListaAcuerdos
-- [ ] Spider LeyesEstatales
+- [x] Spider LeyesEstatales
 - [x] Spider AgendaAudiencias
 - [x] Spider Notificaciones
-- [ ] Spider TocasElectorales
+- [x] Spider TocasElectorales
 - [ ] Pipeline para guardar items en DB-PostgreSQL
 
 
@@ -59,6 +59,9 @@ Un arreglo de elementos conformados de la siguiente forma:
 ```
 ---
 ### LeyesEstatales
+> Descarga todos los PDF que se encuentran en el contenedor de "Leyes Estatales" y los guarda en el directorio **./files/leyes_estatales**
+
+> URL: [http://poderjudicialags.gob.mx/Marco/LeyesEstatales](http://poderjudicialags.gob.mx/Marco/LeyesEstatales)
 
 #### Ejecución:
 ```
@@ -123,6 +126,10 @@ Un arreglo de elementos conformados de la siguiente forma:
 ```
 ---
 ### TocasElectorales
+> Hace un recorrido por todas las url de la página y si está es un pdf lo descarga a la carpeta **./files/tocas_electorales**, sino entra a dicha url y repite el proceso
+
+> URL: [http://poderjudicialags.gob.mx/SalaAdministrativa/TocasElectorales](http://poderjudicialags.gob.mx/SalaAdministrativa/TocasElectorales)
+
 #### Ejecución:
 ```
 scrapy crawl TocasElectorales
