@@ -8,7 +8,24 @@
 import scrapy
 
 
-class AguascalientesItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class AcuerdoPorFechaItem(scrapy.Item):
+    Url = scrapy.Field()
+    Fecha = scrapy.Field()
+    Contenido = scrapy.Field()
+
+
+class ExpedienteItem(scrapy.Item):
+    Url = scrapy.Field()
+    Expediente = scrapy.Field()
+
+
+class AcuerdoPorExpedienteItem(scrapy.Item):
+    Url = scrapy.Field()
+    Fecha = scrapy.Field()
+    contenido = scrapy.Field()  
+
+class NotificacionItem(scrapy.Item):
+    Url = scrapy.Field()
+    Fecha = scrapy.Field()
+    Contenido = scrapy.Field()
+

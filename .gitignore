@@ -101,3 +101,7 @@ ENV/
 # mypy
 .mypy_cache/
 
+# Archivos generados por la salida de scrapy -o *.json
+*.json
+
+files/
